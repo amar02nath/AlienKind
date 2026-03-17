@@ -1,0 +1,62 @@
+/* ─── Global Design Tokens ─────────────────────────────── */
+:root {
+  --clr-bg:          #0a0000;
+  --clr-bg-2:        #0e0100;
+  --clr-card:        rgba(14, 2, 0, 0.95);
+  --clr-red:         #ff2200;
+  --clr-red-dim:     rgba(255, 34, 0, 0.78);
+  --clr-red-faint:   rgba(255, 34, 0, 0.08);
+  --clr-red-glow:    rgba(255, 34, 0, 0.6);
+  --clr-orange:      #ff6600;
+  --clr-green:       #1ba672;
+  --clr-border:      rgba(255, 34, 0, 0.3);
+  --clr-border-hi:   rgba(255, 34, 0, 0.75);
+  --font-display:    'Orbitron', monospace;
+  --font-mono:       'Share Tech Mono', monospace;
+  --transition:      0.2s ease;
+}
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--clr-bg);
+  font-family: var(--font-mono);
+  color: var(--clr-red);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scanlines */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.18) 2px, rgba(0,0,0,0.18) 4px
+  );
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Grid overlay */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,34,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,34,0,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+:focus-visible { outline: 1px solid var(--clr-red); outline-offset: 2px; }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--clr-bg); }
+::-webkit-scrollbar-thumb { background: rgba(255,34,0,0.45); }
+
+@keyframes blink  { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes glitch { 0%,94%{transform:translate(0)} 95%{transform:translate(-2px,1px)} 97%{transform:translate(2px,-1px)} 100%{transform:translate(0)} }
+@keyframes popIn  { 0%{transform:scale(0.65);opacity:0} 60%{transform:scale(1.2)} 100%{transform:scale(1);opacity:1} }

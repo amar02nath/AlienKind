@@ -1,0 +1,14 @@
+.bill-summary { background:var(--clr-card); border:1px solid var(--clr-border); padding:18px 20px; position:relative; }
+.bill-summary::after { content:''; position:absolute; top:0; left:0; width:14px; height:14px; border-top:2px solid rgba(255,34,0,.65); border-left:2px solid rgba(255,34,0,.65); pointer-events:none; }
+.bill-summary__title { font-family:var(--font-display); font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,34,0,.8); margin-bottom:14px; }
+.bill-summary__list { list-style:none; }
+.bill-summary__row { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.bill-summary__label { font-size:13px; font-weight:600; color:rgba(255,34,0,.78); letter-spacing:.04em; }
+.bill-summary__value { font-size:13px; font-weight:700; color:var(--clr-red); letter-spacing:.04em; }
+.bill-summary__value--disc { color:var(--clr-green); }
+.bill-summary__value--free { color:var(--clr-green); font-size:11px; text-transform:uppercase; letter-spacing:.12em; }
+.bill-summary__divider { height:1px; background:rgba(255,34,0,.2); margin:12px 0; }
+.bill-summary__total-row { display:flex; justify-content:space-between; align-items:center; }
+.bill-summary__total-label { font-family:var(--font-display); font-size:14px; font-weight:700; color:var(--clr-red); letter-spacing:.08em; text-shadow:0 0 8px rgba(255,34,0,.45); }
+.bill-summary__total-value { font-family:var(--font-display); font-size:24px; font-weight:900; color:var(--clr-red); text-shadow:0 0 16px rgba(255,34,0,.7); letter-spacing:.04em; }
+.bill-summary__savings { background:rgba(27,166,114,.1); border:1px solid rgba(27,166,114,.35); padding:9px 13px; margin-top:12px; font-size:12px; font-weight:700; color:var(--clr-green); letter-spacing:.04em; text-align:center; line-height:1.4; }

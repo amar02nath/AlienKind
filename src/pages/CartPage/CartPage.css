@@ -1,0 +1,83 @@
+.cart-page {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 70px);
+  padding-bottom: 64px;
+}
+
+/* ── Page header ──────────────────────────── */
+.cart-page__header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 28px 0;
+}
+.cart-page__back {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255, 34, 0, 0.75);
+  background: transparent;
+  border: 1.5px solid rgba(255, 34, 0, 0.45);
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cart-page__back:hover {
+  border-color: var(--clr-red);
+  color: var(--clr-red);
+  box-shadow: 0 0 10px rgba(255, 34, 0, 0.25);
+}
+.cart-page__title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--clr-red);
+  letter-spacing: .08em;
+  text-shadow: 0 0 16px rgba(255, 34, 0, 0.6);
+}
+.cart-page__subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 34, 0, 0.65);
+  letter-spacing: .08em;
+  margin-top: 4px;
+}
+
+/* ── Two-column layout ────────────────────── */
+.cart-page__layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  padding: 24px 28px 0;
+  align-items: start;
+}
+
+/* Right col sticky */
+.cart-page__right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 86px;
+}
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 960px) {
+  .cart-page__layout {
+    grid-template-columns: 1fr;
+  }
+  .cart-page__right {
+    position: relative;
+    top: 0;
+  }
+}
+@media (max-width: 640px) {
+  .cart-page__header { padding: 20px 16px 0; }
+  .cart-page__layout  { padding: 20px 16px 0; gap: 16px; }
+  .cart-page__title   { font-size: 20px; }
+}

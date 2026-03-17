@@ -1,0 +1,6 @@
+.checkout-card { background:var(--clr-card); border:1px solid var(--clr-border); padding:18px 20px; position:relative; }
+.checkout-card::after { content:''; position:absolute; top:0; left:0; width:14px; height:14px; border-top:2px solid rgba(255,34,0,.65); border-left:2px solid rgba(255,34,0,.65); pointer-events:none; }
+.checkout-card__btn { width:100%; font-family:var(--font-display); font-size:13px; font-weight:900; letter-spacing:.1em; text-transform:uppercase; background:var(--clr-red); border:none; color:#000; padding:16px; cursor:pointer; transition:background .22s,box-shadow .22s; box-shadow:0 0 22px rgba(255,34,0,.4); }
+.checkout-card__btn:hover { background:#ff3a1a; box-shadow:0 0 32px rgba(255,34,0,.65); }
+.checkout-card__note { font-size:11px; font-weight:600; color:rgba(255,34,0,.55); text-align:center; margin-top:10px; letter-spacing:.05em; line-height:1.55; }
+.checkout-card__note span { color:rgba(255,34,0,.75); }

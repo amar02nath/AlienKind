@@ -1,0 +1,6 @@
+.qty-stepper { display:flex; align-items:center; }
+.qty-stepper__btn { width:32px; height:32px; background:rgba(255,34,0,.1); border:1.5px solid rgba(255,34,0,.65); color:var(--clr-red); font-family:var(--font-display); font-size:17px; font-weight:900; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .15s; padding:0; line-height:1; }
+.qty-stepper__btn:hover { background:rgba(255,34,0,.26); box-shadow:0 0 10px rgba(255,34,0,.35); }
+.qty-stepper__num { width:38px; height:32px; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:14px; font-weight:900; color:var(--clr-red); background:rgba(255,34,0,.07); border-top:1.5px solid rgba(255,34,0,.65); border-bottom:1.5px solid rgba(255,34,0,.65); text-shadow:0 0 8px rgba(255,34,0,.55); animation:popIn .22s ease; }
+.qty-stepper__add { font-family:var(--font-mono); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,34,0,.1); border:1.5px solid rgba(255,34,0,.7); color:var(--clr-red); padding:0 14px; height:32px; cursor:pointer; transition:all .2s; text-shadow:0 0 5px rgba(255,34,0,.55); display:inline-flex; align-items:center; }
+.qty-stepper__add:hover { background:rgba(255,34,0,.22); border-color:var(--clr-red); box-shadow:0 0 12px rgba(255,34,0,.35); }
